@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #34363d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: all .3s ease-in-out;
+}
+
+#topPart {
+    margin-block-start: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & input[type="text"] {
+        width: 60rem;
+        border-radius: 8rem;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border: .1rem solid dodgerblue;
+        outline: none;
+        background: whitesmoke;
+        box-shadow: 0rem .5rem .3rem #0000007e;
+    }
+
+    & input[type="button"] {
+        display: inline-block;
+        margin-left: 1rem;
+        padding: 1.5rem 2.5rem;
+        border-radius: 8rem;
+        font-weight: bold;
+        background: dodgerblue;
+        text-align: center;
+        font-size: 1.6rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        box-shadow: 0rem .2rem .3rem #000000b9;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
+#middlePart {
+    margin-block: 2rem;
+    text-align: center;
+    color: orangered;
+    font-size: 2.2rem;
+    height: 3rem;
+    text-shadow: 0rem .2rem .3rem #000000a9;
+    word-spacing: 1rem;
+    letter-spacing: .3rem;
+    user-select: none;
+}
+
+#bottomPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+
+    & table {
+        width: 50%;
+        border-collapse: collapse;
+        font-size: 2rem;
+        user-select: none;
+        box-shadow: 0rem .8rem .9rem #00000071;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    & table,
+    td {
+        border: .1rem solid tomato;
+    }
+
+    & table thead tr {
+        background: #24792b;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    & table thead tr td:nth-child(1) {
+        width: 20rem;
+    }
+
+    & table thead tr td:nth-child(2) {
+        width: 80rem;
+    }
+
+    & table thead tr td:nth-child(3) {
+        width: 50rem;
+    }
+
+    & table tr {
+        margin: .5rem 0rem;
+    }
+
+    & table td {
+        padding: 1.2rem 1.5rem;
+    }
+
+    & table tbody tr {
+        background: #ffffffb4;
+        text-align: center;
+        transition: background .2s ease-in-out;
+        &:hover{
+                background: #ffffff8e;
+            }
+    }
+}
+
+.editBtn,
+.deleteBtn {
+    font-weight: bold;
+}
+
+.editBtn {
+    color: green;
+}
+
+.deleteBtn {
+    color: red;
+}
